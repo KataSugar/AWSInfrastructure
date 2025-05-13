@@ -1,0 +1,11 @@
+This script responsible for create AWS infrastructure. 
+
+1. creates a VPC and two subnets, one of them is public, the other one is private
+
+2. creates an Internet Gateway(IGW), which is getting attached to the VPC
+
+3. there is a route table as well, attached to public subnet, with a default gateway 0.0.0.0/0 towards the IGW
+
+4. security group allows the SSH connection on port 22 from everywhere
+
+5. EC2 launching in public subnet
