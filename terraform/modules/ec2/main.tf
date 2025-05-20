@@ -1,5 +1,5 @@
  
- # Fetch latest Amazon Linux 2 AMI
+ # fetch latest Amazon Linux 2 AMI
 data "aws_ami" "amazon_linux" {
   most_recent = true
   owners      = ["amazon"]
@@ -10,8 +10,12 @@ data "aws_ami" "amazon_linux" {
   }
 }
 
+# read server.js file
 data "template_file" "server_js" {
   template = file("${path.module}/../../server.js")
+  vars = {
+    port = 8080
+  }
 }
  
 resource "aws_instance" "backend" {

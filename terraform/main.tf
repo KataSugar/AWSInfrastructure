@@ -24,10 +24,7 @@ module "ec2" {
   environment       = var.environment
 }
 
-# Read server.js file
-data "template_file" "server_js" {
- template = file("${path.module}/../server.js")
-}
+
 
 
 
