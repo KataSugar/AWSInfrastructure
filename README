@@ -1,6 +1,6 @@
-This script responsible for create AWS infrastructure. 
+This terraform project responsible for create AWS infrastructure. 
 
-1. creates a VPC and two subnets, one of them is public, the other one is private
+1. creates a VPC and a subnet
 
 2. creates an Internet Gateway(IGW), which is getting attached to the VPC
 
@@ -9,3 +9,10 @@ This script responsible for create AWS infrastructure.
 4. security group allows the SSH connection on port 22 from everywhere
 
 5. EC2 launching in public subnet
+
+Commands to run it: 
+cd terraform
+terraform init
+terraform plan
+terraform apply
+terraform destroy
